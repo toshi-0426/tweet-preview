@@ -1,2 +1,0 @@
-# tweet-preview
-for learning 
