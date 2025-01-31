@@ -76,23 +76,28 @@ function TweetForm({ onTweetSubmit }) {
   );
 }
 
-function TweetPreview({ tweetData }) {
+
+
+function TweetPreview ({ tweetData }) {
   return (
-    <div>
-      <TweetSimple tweetData={tweetData}/>
-      <TweetDetail tweetData={tweetData}/>
+    <div className="bg-white rounded-xl border p-6 w-[550px]">
+      <div className="flex justify-between mb-2">
+        <span className="text-blue-600 font-bold text-xl">{ tweetData.name }</span>
+        <span className="text-gray-400 font-medium">Apr 2</span>
+      </div>
+
+      <div className='flex items-start mb-3'>
+        { tweetData.content }
+      </div>
+
+      <div className="flex justify-between text-gray-500">
+        <span>57K Retweets</span>
+        <span>246.1K Quote Tweets</span>
+        <span>1.3M Likes</span>
+      </div>
     </div>
+    
   );
-}
-
-function TweetSimple ({ tweetData }) {
-  return (
-    <h1>{tweetData.id}</h1>
-  );
-}
-
-function TweetDetail({ tweetData }) {
-
 }
 
 
